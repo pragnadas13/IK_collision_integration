@@ -2,6 +2,7 @@ This repository has 3 folders
 1) neural_network_train is for training the network,
 The dataset is available at: 
 
+https://ukaeauk-my.sharepoint.com/personal/pragna_das_ukaea_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fpragna%5Fdas%5Fukaea%5Fuk%2FDocuments%2FraceWork%2FRAIN%2FRAINwork%2Fmanipulator%2Fneural%5Fnetwork%5Ftrain
 
 The "main_nn.py" is to be run to train the network. 
 The confg_file for Collision_Dataset is "TB7_np_Data.pkl"
