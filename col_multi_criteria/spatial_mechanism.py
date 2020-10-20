@@ -220,7 +220,7 @@ def plain_IK(rootDic, robot):
 def collision_avoidance_IK(lineNo, rootDic, obs_centroid, __iteration_IK__, robot):
     q_sa = np.zeros((len(t_vec), 7))
     q_sa[0, :] = q_initial
-    k0 = 1
+    k0 = 5
     start_IK = time.time()
     for i, t in enumerate(t_vec[1:]):
         J = jacobian_spatial(q_sa[i, :])
@@ -355,7 +355,7 @@ def translate_centroid(robot, centroid):
 if __name__ == "__main__":
     rootDic = sys.argv[1]
     rep = sys.argv[2]
-    __which__robot__ = 'RR'
+    __which__robot__ = 'LR'
     # centroid, __which__robot__, __at_time__, lineNo = read_centroid_from_gazebo()
     # print("centroid", centroid)
     # obs_centroid = translate_centroid(robot=__which__robot__, centroid=centroid)

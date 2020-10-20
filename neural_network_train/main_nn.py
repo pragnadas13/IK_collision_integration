@@ -72,16 +72,17 @@ def train(centroid_file, model_name):
                 logger.info('batch Number:%d validation Loss = %f',batch_id,total_val_loss)
                 colData.set_dset('train')
 
-# if __name__ == "__main__":
-def main_nn(robot):
+if __name__ == "__main__":
+#def main_nn(robot):
     logging.basicConfig(format='[%(asctime)s, %(levelname)s, %(name)s] %(message)s',
                         datefmt='%Y-%m-%d %H:%M:%S',
                         level=logging.INFO)
-    if robot=='rr':
-        centroid_file='/home/pragna/Documents/Documents/collision/collision_model/main/Region_TranslatedCentroid_Data_rr.pkl'
+    robot = 'lr'
+    if robot =='rr':
+        centroid_file='octree_TranslatedCentroid_Data_rr.pkl'
         model_name = 'octree_Best_model_rr.th'
-    else:
-        centroid_file = '/home/pragna/Documents/Documents/collision/collision_model/main/Region_TranslatedCentroid_Data_lr.pkl'
+    elif robot =='lr':
+        centroid_file = 'octree_TranslatedCentroid_Data_lr.pkl'
         model_name = 'octree_Best_model_lr.th'
 
     train(centroid_file=centroid_file, model_name=model_name)
